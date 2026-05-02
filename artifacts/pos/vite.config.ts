@@ -3,7 +3,6 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
-const isReplit = process.env.REPL_ID !== undefined;
 const port = Number(process.env.PORT ?? "5173");
 const basePath = process.env.BASE_PATH ?? "/";
 
@@ -12,22 +11,6 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    ...(isReplit
-      ? [
-          (
-            await import("@replit/vite-plugin-runtime-error-modal")
-          ).default(),
-          ...(process.env.NODE_ENV !== "production"
-            ? [
-                await import("@replit/vite-plugin-cartographer").then((m) =>
-                  m.cartographer({
-                    root: path.resolve(import.meta.dirname, ".."),
-                  }),
-                ),
-                ]
-            : []),
-        ]
-      : []),
   ],
   resolve: {
     alias: {
