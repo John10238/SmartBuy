@@ -1,0 +1,61 @@
+modules = ["nodejs-24", "postgresql-16"]
+
+[deployment]
+router = "application"
+deploymentTarget = "autoscale"
+
+[deployment.postBuild]
+args = ["pnpm", "store", "prune"]
+env = { "CI" = "true" }
+
+[workflows]
+runButton = "Project"
+
+[agent]
+stack = "PNPM_WORKSPACE"
+expertMode = true
+
+[postMerge]
+path = "scripts/post-merge.sh"
+timeoutMs = 20000
+
+[[ports]]
+localPort = 8080
+externalPort = 8080
+
+[[ports]]
+localPort = 8081
+externalPort = 80
+
+[[ports]]
+localPort = 9997
+externalPort = 3003
+
+[[ports]]
+localPort = 9998
+externalPort = 3002
+
+[[ports]]
+localPort = 9999
+externalPort = 3001
+
+[[ports]]
+localPort = 24730
+externalPort = 3000
+
+[userenv]
+
+[userenv.shared]
+MPESA_ENVIRONMENT = "sandbox"
+MPESA_CONSUMER_KEY = "y2nDWcgf5WIbcF6Ak8oZuAAghr9rZk1RIF5zzODgjNc2N9Ml"
+MPESA_CONSUMER_SECRET = "uY6PxpcFQsFxG9JnwiGNuxbhLF4nByiHdB5oc3p0jKXmNDJflfP2BGwwZpwvmJqM"
+MPESA_PASSKEY = "bfb279f9aa9bdbcf1c2c6b4a5f0e0a1b"
+MPESA_CALLBACK_URL = "https://smart-buy-3-zip--kamaujohn2023.replit.app/api/mpesa/callback"
+MPESA_SHORTCODE = "174379"
+
+[userenv.development]
+
+[userenv.production]
+
+[nix]
+channel = "stable-25_05"

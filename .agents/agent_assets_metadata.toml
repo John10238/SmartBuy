@@ -1,0 +1,38 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "GhIBv02wBn2AySMG-Owu7"
+uri = "file://artifacts/pos/public/images/product-unga.png"
+type = "image"
+title = "Maize meal flour packet"
+
+[[generated]]
+id = "Pv1v8L3Q1WEJUBzPUoXxT"
+uri = "file://artifacts/pos/public/images/product-bread.png"
+type = "image"
+title = "Loaf of sliced bread"
+
+[[generated]]
+id = "tttP7nPv2WYg3I3uLosu8"
+uri = "file://artifacts/pos/public/images/product-milk.png"
+type = "image"
+title = "Packet of milk"
+
+[[generated]]
+id = "XmnsLH3je8KO-0QvkhPnu"
+uri = "file://artifacts/pos/public/images/product-oil.png"
+type = "image"
+title = "Cooking oil bottle"
+
+[[generated]]
+id = "hPvwmu7vsz9AoDxNNInYk"
+uri = "file://artifacts/pos/public/images/product-soap.png"
+type = "image"
+title = "Bar of soap"
+
+[[generated]]
+id = "eZkvIWjsOYEyzqkKRy79R"
+uri = "file://artifacts/pos/public/images/product-tea.png"
+type = "image"
+title = "Packet of tea leaves"
