@@ -6,6 +6,8 @@ import { CartProvider } from "@/contexts/CartContext";
 import { AuthProvider, useAuth } from "@/contexts/AuthContext";
 import { Layout } from "@/components/layout";
 import NotFound from "@/pages/not-found";
+import { PwaUpdatePrompt } from "@/components/PwaUpdatePrompt";
+import { PwaInstallPrompt } from "@/components/PwaInstallPrompt";
 
 import Register from "@/pages/Register";
 import Checkout from "@/pages/Checkout";
@@ -75,6 +77,8 @@ function App() {
             <AuthGate />
           </WouterRouter>
           <Toaster />
+          <PwaUpdatePrompt />
+          <PwaInstallPrompt />
         </TooltipProvider>
       </AuthProvider>
     </QueryClientProvider>
