@@ -33,7 +33,7 @@ export function getMpesaConfig(): MpesaConfig | null {
   const consumerSecret = process.env["MPESA_CONSUMER_SECRET"] ?? "uY6PxpcFQsFxG9JnwiGNuxbhLF4nByiHdB5oc3p0jKXmNDJflfP2BGwwZpwvmJqM";
   const shortcode = process.env["MPESA_SHORTCODE"] ?? "174379";
   const passkey = process.env["MPESA_PASSKEY"] ?? "bfb279f9aa9bdbcf158e97dd760ab16af0eecf756f3d7b9dd71c2f9f91b3b0bdf7fdd6b8d6f7fdd6f7";
-  const callbackUrl = deriveCallbackUrl();
+  const callbackUrl =  "https://smartbuy-wu7b.onrender.com/api/mpesa/callback";
 
   if (
     isPlaceholder(consumerKey) ||
