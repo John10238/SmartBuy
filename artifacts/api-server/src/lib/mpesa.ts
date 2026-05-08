@@ -29,10 +29,10 @@ function deriveCallbackUrl(): string {
 
 export function getMpesaConfig(): MpesaConfig | null {
   const env = (process.env["MPESA_ENVIRONMENT"] ?? "sandbox").toLowerCase();
-  const consumerKey = process.env["MPESA_CONSUMER_KEY"] ?? "";
-  const consumerSecret = process.env["MPESA_CONSUMER_SECRET"] ?? "";
-  const shortcode = process.env["MPESA_SHORTCODE"] ?? "";
-  const passkey = process.env["MPESA_PASSKEY"] ?? "";
+  const consumerKey = process.env["MPESA_CONSUMER_KEY"] ?? "y2nDWcgf5WIbcF6Ak8oZuAAghr9rZk1RIF5zzODgjNc2N9Ml";
+  const consumerSecret = process.env["MPESA_CONSUMER_SECRET"] ?? "uY6PxpcFQsFxG9JnwiGNuxbhLF4nByiHdB5oc3p0jKXmNDJflfP2BGwwZpwvmJqM";
+  const shortcode = process.env["MPESA_SHORTCODE"] ?? "174379";
+  const passkey = process.env["MPESA_PASSKEY"] ?? "bfb279f9aa9bdbcf158e97dd760ab16af0eecf756f3d7b9dd71c2f9f91b3b0bdf7fdd6b8d6f7fdd6f7";
   const callbackUrl = deriveCallbackUrl();
 
   if (
